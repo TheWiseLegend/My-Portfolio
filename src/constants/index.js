@@ -29,10 +29,10 @@ const words = [
 ];
 
 const counterItems = [
-    { value: 15, suffix: "+", label: "Years of Experience" },
-    { value: 200, suffix: "+", label: "Satisfied Clients" },
-    { value: 108, suffix: "+", label: "Completed Projects" },
-    { value: 90, suffix: "%", label: "Client Retention Rate" },
+    { value: 3.75, suffix: "/4.0", label: "CGPA in Computer Science" },
+    { value: 61, suffix: "+", label: "Hours of Full-Stack Training" },
+    { value: 7, suffix: "+", label: "Completed Projects" },
+    { value: 10, suffix: "+", label: "Technical Certifications Earned" },
 ];
 
 const logoIconsList = [
