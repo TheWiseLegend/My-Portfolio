@@ -74,18 +74,18 @@ const logoIconsList = [
 const abilities = [
     {
         imgPath: "/images/seo.png",
-        title: "Quality Focus",
-        desc: "Delivering high-quality results while maintaining attention to every detail.",
+        title: "Continuous Learning",
+        desc: "Backed by 10+ technical certifications across back-end, front-end, databases, AI, and version control. Continuously expanding technical depth through hands-on projects and formal training programs.",
     },
     {
         imgPath: "/images/chat.png",
-        title: "Reliable Communication",
-        desc: "Keeping you updated at every step to ensure transparency and clarity.",
+        title: "Cross-Cultural Communication",
+        desc: "Collaborating in diverse teams and leading community events with clarity and empathy.",
     },
     {
-        imgPath: "/images/time.png",
-        title: "On-Time Delivery",
-        desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
+        imgPath: "/images/codeLogo1.png",
+        title: "Full-Stack Development",
+        desc: "Capable of building end-to-end applications using modern stacks like React Native, Node.js, and PostgreSQL. Experienced in deploying scalable systems on AWS and creating responsive, user-focused interfaces.",
     },
 ];
 
