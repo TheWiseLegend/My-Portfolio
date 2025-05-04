@@ -208,8 +208,8 @@ const expCards = [
     },
     {
         review: "This project challenged me with 3D logic, AI prompt handling, and UI optimization. It pushed my frontend skills into new territory and taught me how to debug deeply.",
-        imgPath: "/images/tshirt-customizer.png",
-        logoPath: "/images/threejs-logo.png",
+        imgPath: "/images/3dtshirtImage.png",
+        logoPath: "/images/3dtshirtLogo.png",
         title: "3D T-Shirt Customizer – AI-Powered SaaS Tool",
         date: "Late 2023 – Early 2024",
         responsibilities: [
