@@ -12,8 +12,8 @@ const navLinks = [
         link: "#skills",
     },
     {
-        name: "Testimonials",
-        link: "#testimonials",
+        name: "Volunteer Work",
+        link: "#volunteer",
     },
 ];
 
@@ -235,42 +235,66 @@ const expLogos = [
     },
 ];
 
-const testimonials = [
+const volunteers = [
     {
-        name: "Esther Howard",
-        mentions: "@estherhoward",
-        review: "I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
-        imgPath: "/images/client1.png",
+        role: "Program Coordinator & Supervisor",
+        organization: "WAMY's Program 'Qarar'",
+        period: "Oct 2024",
+        description: [
+            "Supervised volunteer teams and facilitated community-building events",
+            "Developed organizational systems to improve program efficiency",
+            "Coordinated logistics and resources for program activities",
+        ],
     },
     {
-        name: "Wade Warren",
-        mentions: "@wadewarren",
-        review: "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
-        imgPath: "/images/client3.png",
+        role: "MC & Event Coordinator",
+        organization: "Islamic Public Figure Event (Dr. Haitham Talat)",
+        period: "Aug 2024",
+        description: [
+            "Hosted a 3-hour talk for over 100 attendees as the main event MC",
+            "Coordinated behind-the-scenes logistics for smooth event execution",
+            "Facilitated Q&A sessions and audience engagement activities",
+        ],
     },
     {
-        name: "Guy Hawkins",
-        mentions: "@guyhawkins",
-        review: "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-        imgPath: "/images/client2.png",
+        role: "High Committee Member",
+        organization: "Usrah International Bureau – University Club",
+        period: "2024",
+        description: [
+            "Planned and executed university events promoting community engagement",
+            "Developed strategies to increase student participation in campus activities",
+            "Collaborated with diverse teams to create meaningful cultural programs",
+        ],
     },
     {
-        name: "Marvin McKinney",
-        mentions: "@marvinmckinney",
-        review: "Adrian was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
-        imgPath: "/images/client5.png",
+        role: "Volunteer Personal Gym Coach",
+        organization: "Self-Initiated",
+        period: " Active",
+        description: [
+            "Provided personalized fitness guidance to fellow students",
+            "Created workout programs tailored to individual goals and fitness levels",
+            "Promoted health discipline and consistent training habits",
+        ],
     },
     {
-        name: "Floyd Miles",
-        mentions: "@floydmiles",
-        review: "Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
-        imgPath: "/images/client4.png",
+        role: "Cultural Representative",
+        organization: "iEXPO – International Cultural Festival",
+        period: "June 2024",
+        description: [
+            "Represented Palestine through research-based educational materials",
+            "Facilitated live discussions about cultural heritage and traditions",
+            "Created engaging displays showcasing Palestinian history and culture",
+        ],
     },
     {
-        name: "Albert Flores",
-        mentions: "@albertflores",
-        review: "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
-        imgPath: "/images/client6.png",
+        role: "Researcher & Content Writer",
+        organization: "Telposhow – Largest Arab YouTuber in Malaysia",
+        period: "Active",
+        description: [
+            "Created research-based scripts covering social awareness topics",
+            "Wrote detailed scripts for educational video content",
+            "Contributed to content planning and thematic development",
+        ],
     },
 ];
 
@@ -300,7 +324,7 @@ export {
     counterItems,
     expCards,
     expLogos,
-    testimonials,
+    volunteers,
     socialImgs,
     techStackIcons,
     techStackImgs,
