@@ -187,7 +187,7 @@ const expCards = [
         imgPath: "/images/krafty.jpg",
         logoPath: "/images/kraftsyLogo.jpg",
         title: "Kraftsy – Artisan E-Commerce Platform",
-        date: "Early 2023",
+        date: "Early 2024",
         responsibilities: [
             "Built a secure full-stack platform using Django, JavaScript, and SQLite.",
             "Implemented multi-role user authentication and product order flow.",
@@ -199,7 +199,7 @@ const expCards = [
         imgPath: "/images/fieldmateImage.png",
         logoPath: "/images/fieldmateLogo.png",
         title: "FieldMate – Futsal Booking App",
-        date: "Mid 2023",
+        date: "End 2024",
         responsibilities: [
             "Developed a full-stack mobile app using React Native and Node.js.",
             "Built a backend with Express and PostgreSQL, deployed on AWS.",
@@ -211,7 +211,7 @@ const expCards = [
         imgPath: "/images/3dtshirtImage.png",
         logoPath: "/images/3dtshirtLogo.png",
         title: "3D T-Shirt Customizer – AI-Powered SaaS Tool",
-        date: "Late 2023 – Early 2024",
+        date: "April 2025",
         responsibilities: [
             "Developed a 3D t-shirt editor using React, Three.js, and Vite.",
             "Integrated AI-driven texture generation with prompt-based logic.",
@@ -299,21 +299,22 @@ const volunteers = [
 ];
 
 const socialImgs = [
-    {
-        name: "insta",
-        imgPath: "/images/insta.png",
-    },
-    {
-        name: "fb",
-        imgPath: "/images/fb.png",
-    },
-    {
-        name: "x",
-        imgPath: "/images/x.png",
-    },
+    // {
+    //     name: "insta",
+    //     imgPath: "/images/insta.png",
+    // },
+    // {
+    //     name: "fb",
+    //     imgPath: "/images/fb.png",
+    // },
+    // {
+    //     name: "x",
+    //     imgPath: "/images/x.png",
+    // },
     {
         name: "linkedin",
         imgPath: "/images/linkedin.png",
+        url: "https://www.linkedin.com/in/amr-ibrahim-711600253"
     },
 ];
 

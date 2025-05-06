@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from "react";
 import TitleHeader from "../components/TitleHeader";
 import emailjs from "@emailjs/browser";
@@ -95,6 +94,7 @@ const Contact = () => {
                                         value={formData.message}
                                         onChange={handleChange}
                                         required
+                                        className="h-40 md:h-50 w-full resize-none"
                                     ></textarea>
                                 </div>
 

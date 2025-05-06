@@ -7,6 +7,7 @@ import ExperienceSection from "./sections/ExperienceSection";
 import TechStack from "./sections/TechStack";
 import VolunteerExp from "./sections/VolunteerExp";
 import Contact from "./sections/Contact";
+import Footer from "./sections/Footer";
 
 const App = () => {
     return (
@@ -20,6 +21,7 @@ const App = () => {
             <TechStack />
             <VolunteerExp />
             <Contact />
+            <Footer />
         </>
     );
 };
