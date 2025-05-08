@@ -470,3 +470,39 @@ section {
 .card:hover::before {
     opacity: 1;
 }
+
+
+/* For floating image container */
+.floating-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for the container */
+    mix-blend-mode: lighten; /* Blend the border with the black background */
+    border-radius: 12px; /* Optional: Add rounded corners */
+}
+
+/* For floating image */
+.floating-image {
+    width: 100%; /* Adjust to match the scale of the 3D prop */
+    max-width: 300px;
+    animation: float 3s ease-in-out infinite;
+    mix-blend-mode: lighten; /* Blend the image with the black background */
+    opacity: 0.9; /* Slight transparency for better blending */
+    filter: brightness(1.2) contrast(1.1); /* Enhance brightness and contrast */
+}
+
+/* Floating animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

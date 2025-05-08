@@ -1,27 +1,35 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { words } from "../constants/index.js";
 import Button from "../components/Button.jsx";
-import HeroExperience from "../components/HeroModels/HeroExperience.jsx";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import AnimatedCounter from "../components/AnimatedCounter.jsx";
+import { useMediaQuery } from "react-responsive";
+import HeroExperience from "../components/HeroModels/HeroExperience.jsx";
 
 const Hero = () => {
+    const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
     useGSAP(() => {
-        gsap.fromTo(".hero-text h1",
+        // Reduce animations on mobile
+        const yOffset = isMobile ? 25 : 50;
+        const duration = isMobile ? 0.7 : 1;
+
+        gsap.fromTo(
+            ".hero-text h1",
             {
-                y: 50,
+                y: yOffset,
                 opacity: 0,
             },
             {
                 y: 0,
                 opacity: 1,
-                duration: 1,
-                stagger: 0.3,
-                ease: "power2.inOut",
+                duration: duration,
+                stagger: isMobile ? 0.2 : 0.3,
+                ease: "power2.out", // Changed from inOut to out for better performance
             }
-        )
-    })
+        );
+    }, [isMobile]);
 
     return (
         <section id="hero" className="relative overflow-hidden">
@@ -29,7 +37,11 @@ const Hero = () => {
                 <img src="/images/bg.png" alt="background" />
             </div>
 
-            <div className="hero-layout">
+            <div
+                className={`hero-layout ${
+                    isMobile ? "mobile-hero-layout" : ""
+                }`}
+            >
                 {/* Left: Hero content goes here */}
                 <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
                     <div className="flex flex-col gap-7">
@@ -64,20 +76,22 @@ const Hero = () => {
                         for programming
                     </p>
                     <Button
-                        className="md:w-80 md:h-16 w-60 h-12"
+                        className="md:w-80 md:h-16 w-60 h-12 mt-5"
                         id="button"
                         text="See my Work"
                     />
                 </header>
 
-                {/* Right: Hero 3D MODEL goes here */}
+                {/* Right: Hero 3D MODEL or static image */}
                 <figure>
-                    <div className="hero-3d-layout">
-                        <HeroExperience />
+                    <div className="hero-3d-layout mt-5">
+                            <HeroExperience />
                     </div>
                 </figure>
             </div>
-            <AnimatedCounter />
+
+            {/* Render AnimatedCounter with reduced animations on mobile */}
+            <AnimatedCounter isMobile={isMobile} />
         </section>
     );
 };

@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useRef } from "react";
 
 const GlowCard = ({ card, children, index }) => {

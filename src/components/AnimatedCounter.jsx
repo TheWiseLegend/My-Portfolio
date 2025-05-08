@@ -3,31 +3,36 @@ import { counterItems } from "../constants";
 import CountUp from "react-countup";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useMediaQuery } from "react-responsive";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const AnimatedCounter = () => {
     const counterRef = useRef(null);
     const [startAnimation, setStartAnimation] = useState(false);
+    const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
     useEffect(() => {
+        const duration = isMobile ? 1 : 1.3;
+        const stagger = isMobile ? 0 : 0.2;
+
         gsap.fromTo(
-            ".counter-card",
-            { opacity: 0, y: 50 }, // Start with opacity 0 and move down 50px
+            ".counter-number",
+            { opacity: 0, y: 50 },
             {
-                opacity: 2,
+                opacity: 1,
                 y: 0,
-                duration: 2,
+                duration: duration,
                 ease: "power2.inOut",
-                stagger: 0.2, // Stagger the animation for each card
+                stagger: stagger,
                 scrollTrigger: {
                     trigger: counterRef.current,
-                    start: "top 90%", // Trigger when 20% of the section is visible
-                    onEnter: () => setStartAnimation(true), // Start the animation
+                    start: "top 90%",
+                    onEnter: () => setStartAnimation(true),
                 },
             }
         );
-    }, []);
+    }, [isMobile]);
 
     return (
         <div
