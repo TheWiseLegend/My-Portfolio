@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { Environment, useGLTF, Float, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { useEffect } from "react";
@@ -17,7 +16,7 @@ const TechIcon = ({ model }) => {
                 }
             });
         }
-    }, [scene]);
+    }, [scene, model.name]);
 
     return (
         <Canvas>

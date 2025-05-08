@@ -13,7 +13,7 @@ const AnimatedCounter = () => {
     const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
     useEffect(() => {
-        const duration = isMobile ? 1 : 1.3;
+        const duration = isMobile ? 1 : 1.2;
         const stagger = isMobile ? 0 : 0.2;
 
         gsap.fromTo(

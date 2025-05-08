@@ -1,11 +1,14 @@
 import React from "react";
 import TitleHeader from "../components/TitleHeader";
-import { techStackIcons } from "../constants";
+import { techStackIcons, techStackImgs } from "../constants";
 import TechIcon from "../components/Models/TechLogos/TechIcon";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { useMediaQuery } from "react-responsive";
 
 const TechStack = () => {
+    const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
     useGSAP(() => {
         gsap.fromTo(
             ".tech-card",
@@ -32,22 +35,42 @@ const TechStack = () => {
                 />
 
                 <div className="tech-grid">
-                    {techStackIcons.map((icon) => (
-                        <div
-                            key={icon.name}
-                            className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg"
-                        >
-                            <div className="tech-card-animated-bg" />
-                            <div className="tech-card-content">
-                                <div className="tech-icon-wrapper">
-                                    <TechIcon model={icon} />
-                                </div>
-                                <div className="padding-x w-full">
-                                    <p>{icon.name}</p>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
+                    {isMobile
+                        ? techStackImgs.map((img) => (
+                              <div
+                                  key={img.name}
+                                  className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg"
+                              >
+                                  <div className="tech-card-animated-bg" />
+                                  <div className="tech-card-content">
+                                      <div className="tech-icon-wrapper">
+                                          <img
+                                              src={img.imgPath}
+                                              alt={img.name}
+                                          />
+                                      </div>
+                                      <div className="padding-x w-full">
+                                          <p>{img.name}</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          ))
+                        : techStackIcons.map((icon) => (
+                              <div
+                                  key={icon.name}
+                                  className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg"
+                              >
+                                  <div className="tech-card-animated-bg" />
+                                  <div className="tech-card-content">
+                                      <div className="tech-icon-wrapper">
+                                          <TechIcon model={icon} />
+                                      </div>
+                                      <div className="padding-x w-full">
+                                          <p>{icon.name}</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          ))}
                 </div>
             </div>
         </div>
